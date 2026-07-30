@@ -1,0 +1,131 @@
+{
+  "manifest_version": 3,
+  "name": "Google Sheets Sorting Helper",
+  "version": "1.0.0",
+  "description": "Advanced sorting capabilities for Google Sheets with preview, custom orders, multi-column support, and AI-powered smart sorting",
+  "author": "Kiro Development Team",
+  "homepage_url": "https://github.com/kiro-sheets-helper",
+  
+  "permissions": [
+    "activeTab",
+    "identity",
+    "storage",
+    "contextMenus",
+    "scripting"
+  ],
+  
+  "host_permissions": [
+    "https://docs.google.com/*",
+    "https://sheets.google.com/*"
+  ],
+  
+  "oauth2": {
+    "client_id": "YOUR_CLIENT_ID.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/spreadsheets"
+    ]
+  },
+  
+  "content_scripts": [
+    {
+      "matches": [
+        "https://docs.google.com/spreadsheets/*"
+      ],
+      "js": [
+        "shared/sorting-algorithms.js",
+        "content/sheets-api-client.js",
+        "content/ui-components.js",
+        "content/content-script.js"
+      ],
+      "css": [
+        "content/content-styles.css"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  
+  "background": {
+    "service_worker": "background/background.js",
+    "type": "module"
+  },
+  
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Google Sheets Sorting Helper",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "content/overlay.html",
+        "content/overlay.css",
+        "shared/*",
+        "icons/*"
+      ],
+      "matches": [
+        "https://docs.google.com/*",
+        "https://sheets.google.com/*"
+      ]
+    }
+  ],
+  
+  "commands": {
+    "quick-sort": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "Command+Shift+S"
+      },
+      "description": "Quick sort selected range"
+    },
+    "advanced-sort": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+A",
+        "mac": "Command+Shift+A"
+      },
+      "description": "Open advanced sort dialog"
+    },
+    "smart-sort": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+I",
+        "mac": "Command+Shift+I"
+      },
+      "description": "AI-powered smart sort"
+    },
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E",
+        "mac": "Command+Shift+E"
+      }
+    }
+  },
+  
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": false
+  },
+  
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' https://sheets.googleapis.com https://oauth2.googleapis.com"
+  },
+  
+  "externally_connectable": {
+    "matches": [
+      "https://docs.google.com/*",
+      "https://sheets.google.com/*"
+    ]
+  }
+}

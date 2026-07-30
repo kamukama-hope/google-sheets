@@ -1,0 +1,37 @@
+{
+  "timeZone": "America/New_York",
+  "dependencies": {
+    "enabledAdvancedServices": [
+      {
+        "userSymbol": "Sheets",
+        "version": "v4",
+        "serviceId": "sheets"
+      }
+    ]
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/script.container.ui",
+    "https://www.googleapis.com/auth/script.storage"
+  ],
+  "addOns": {
+    "common": {
+      "name": "Sheets Sorting Helper",
+      "logoUrl": "https://example.com/logo.png",
+      "layoutProperties": {
+        "primaryColor": "#4285f4"
+      }
+    },
+    "sheets": {
+      "homepageTrigger": {
+        "runFunction": "onHomepage",
+        "enabled": true
+      },
+      "onSelectionChange": {
+        "runFunction": "onSelectionChange"
+      }
+    }
+  }
+}

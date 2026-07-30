@@ -1,0 +1,38 @@
+{
+  "name": "google-sheets-sorting-helper",
+  "version": "1.0.0",
+  "description": "Advanced sorting capabilities for Google Sheets with workspace add-on and chrome extension",
+  "main": "index.js",
+  "scripts": {
+    "install-clasp": "npm install -g @google/clasp",
+    "login-clasp": "clasp login",
+    "create-addon": "cd workspace-addon && clasp create --type webapp --title \"Sheets Sorting Helper\"",
+    "push-addon": "cd workspace-addon && clasp push",
+    "deploy-addon": "cd workspace-addon && clasp deploy",
+    "build-extension": "cd chrome-extension && npm run build",
+    "dev": "npm run push-addon",
+    "test": "node -e \"const test = require('./shared/test-utilities.js'); console.log('Test utilities loaded successfully');\"",
+    "test-sorting": "node -e \"const sort = require('./shared/sorting-algorithms.js'); const test = require('./shared/test-utilities.js'); console.log(test.runAllTests(sort.advancedSort));\"",
+    "lint": "eslint . --ext .js,.ts",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "google-sheets",
+    "sorting",
+    "workspace-addon",
+    "chrome-extension",
+    "productivity"
+  ],
+  "author": "Kiro Development Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@google/clasp": "^2.4.2",
+    "@types/google-apps-script": "^1.0.83",
+    "eslint": "^8.57.0",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "moment": "^2.29.4"
+  }
+}

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Google Sheets Sorting Helper</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .faq-item:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateX(5px);
+        }
+
+        .faq-item.open {
+            background: var(--light-bg);
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.open .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            display: none;
+            color: var(--text-light);
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+            line-height: 1.8;
+        }
+
+        .faq-item.open .faq-answer {
+            display: block;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .faq-category {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .faq-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-sort"></i>
+                <span>Sheets Sorting Helper</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="docs.html">Docs</a></li>
+                <li><a href="contact.html" class="btn-download">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- FAQ Section -->
+    <section class="hero" style="padding: 3rem 0;">
+        <div class="container faq-container">
+            <h1>Frequently Asked Questions</h1>
+            <p style="color: var(--text-light); font-size: 1.1rem; margin-bottom: 2rem;">Find answers to common questions</p>
+
+            <!-- General Questions -->
+            <div class="faq-category">
+                <h3><i class="fas fa-info-circle"></i> General</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is Google Sheets Sorting Helper really free?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, completely free! No hidden costs, no premium features, no ads, and no credit card required. The project is open-source and community-driven. You can even access the source code on GitHub.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How is this project maintained?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        The project is maintained by a dedicated team of developers with support from the open-source community. We release regular updates with bug fixes and new features.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What's the difference between Chrome Extension and Workspace Add-on?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Chrome Extension is perfect for individual users with features like keyboard shortcuts and context menus. Workspace Add-on is better for teams and enterprises with admin controls and native integration. You can use both simultaneously!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Installation Questions -->
+            <div class="faq-category">
+                <h3><i class="fas fa-download"></i> Installation</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I install the extension?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Visit our download page, choose your preferred platform (Chrome Web Store or Workspace Marketplace), and click "Install Now". The process takes less than a minute.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Which browsers are supported?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Chrome Extension works on Chrome, Edge, Brave, Firefox, and Safari. Workspace Add-on works in all modern browsers including Safari on iOS (though sorting still requires desktop).
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I install both Chrome Extension and Workspace Add-on?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! Both can be installed and used together. They complement each other perfectly - use the extension for individual work and the add-on for team collaboration.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do I need a Google account?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, you need a Google account to use Google Sheets and our tools. Both are free to create and use.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Functionality Questions -->
+            <div class="faq-category">
+                <h3><i class="fas fa-magic"></i> Features & Functionality</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How many columns can I sort by?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        You can sort by up to 3 columns in a single sort operation (primary, secondary, tertiary). For more complex sorts, you can perform multiple sorts in sequence.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What's the maximum dataset size?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Technically unlimited, but performance degrades with very large datasets. We recommend breaking datasets larger than 100,000 rows into segments for optimal performance.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I undo a sort?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! Use Ctrl+Z to undo the last sort. You can also access Google Sheets version history to restore previous states of your spreadsheet.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Does sorting affect formulas?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Formulas move with their rows and are automatically updated. However, be careful with absolute references ($) as they behave differently after sorting.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What happens to merged cells?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Sorting with merged cells can cause issues. We recommend unmerging cells before sorting, then re-merging if needed after the sort.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data & Security Questions -->
+            <div class="faq-category">
+                <h3><i class="fas fa-lock"></i> Data & Security</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is my data safe?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely! All data processing happens on your device. Your data never leaves Google's infrastructure and is never transmitted to external servers.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you track my data?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        We have optional analytics that track feature usage and performance metrics, but no personal data is collected. Analytics can be completely disabled in settings.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What permissions does the extension need?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        The extension requests only necessary permissions to access Google Sheets and provide sorting functionality. We never request unnecessary permissions.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How is my data backed up?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        A backup is automatically created before each sort. Google Sheets also maintains version history so you can restore previous states of your spreadsheet.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Collaboration Questions -->
+            <div class="faq-category">
+                <h3><i class="fas fa-users"></i> Collaboration</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I sort shared sheets?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, if you have edit access to a shared sheet, you can sort it. Read-only sheets cannot be modified. Make sure other collaborators aren't editing the same range simultaneously.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I share sort templates with my team?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! Export your templates and send them to team members. They can import them into their settings. This ensures consistent sorting across your team.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is there real-time collaboration support?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Not yet, but we're working on real-time collaborative sorting features for v1.2. For now, coordinate with your team before sorting shared sheets.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Support Questions -->
+            <div class="faq-category">
+                <h3><i class="fas fa-headset"></i> Support & Help</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>I'm having issues. Where can I get help?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Check our troubleshooting guide first, then visit our FAQ. If you still need help, contact our support team or open an issue on GitHub.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I report a bug?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Visit our GitHub issues page and create a new issue. Include details about what happened, steps to reproduce, and screenshots if helpful.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I request a feature?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely! We value user feedback. Open a discussion on GitHub or contact us directly. The best ideas often come from users like you.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How often are updates released?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        We release monthly updates with bug fixes and improvements. Major features are released quarterly. Check our changelog for detailed release notes.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Development Questions -->
+            <div class="faq-category">
+                <h3><i class="fas fa-code"></i> Development</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I contribute to the project?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! We welcome contributions. Check out our GitHub repository, read the contributing guide, and look for issues labeled "good first issue" to get started.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is the source code available?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, the complete source code is available on GitHub under the MIT license. You can review it, modify it, and contribute improvements.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I set up a development environment?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Clone the repository from GitHub and follow the setup guide in the documentation. You'll need Node.js and npm installed.
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div style="background: linear-gradient(135deg, var(--primary-color) 0%, #667eea 100%); color: white; padding: 2rem; border-radius: 12px; margin-top: 3rem; text-align: center;">
+                <h3 style="margin-bottom: 1rem;">Didn't find your answer?</h3>
+                <p style="margin-bottom: 1.5rem;">We're here to help</p>
+                <a href="contact.html" style="display: inline-block; background: white; color: var(--primary-color); padding: 0.75rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+                    Contact Support
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div style="text-align: center; padding: 2rem 0;">
+                <p>&copy; 2024 Google Sheets Sorting Helper. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/script.js"></script>
+    <script>
+        // FAQ accordion functionality
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

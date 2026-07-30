@@ -1,0 +1,19 @@
+{
+  "name": "sheets-sorting-helper-extension",
+  "version": "1.0.0",
+  "description": "Chrome extension for advanced Google Sheets sorting",
+  "scripts": {
+    "build": "echo \"Building Chrome extension...\" && npm run copy-shared",
+    "copy-shared": "xcopy /E /I /Y \"..\\shared\" \"shared\\\"",
+    "dev": "npm run build",
+    "zip": "powershell Compress-Archive -Path * -DestinationPath sheets-sorting-helper-extension.zip -Force",
+    "clean": "rmdir /s /q shared dist 2>nul || echo \"Clean complete\""
+  },
+  "keywords": [
+    "chrome-extension",
+    "google-sheets",
+    "sorting"
+  ],
+  "author": "Kiro Development Team",
+  "license": "MIT"
+}

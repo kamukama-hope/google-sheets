@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Google Sheets Sorting Helper</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .docs-container {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 2rem;
+            padding: 3rem 0;
+        }
+
+        .docs-sidebar {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .docs-sidebar h3 {
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+        }
+
+        .docs-sidebar ul {
+            list-style: none;
+        }
+
+        .docs-sidebar li {
+            margin-bottom: 0.5rem;
+        }
+
+        .docs-sidebar a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+            display: block;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+
+        .docs-sidebar a:hover,
+        .docs-sidebar a.active {
+            color: var(--primary-color);
+            background: white;
+        }
+
+        .docs-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .docs-section {
+            display: none;
+            animation: fadeIn 0.3s;
+        }
+
+        .docs-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .docs-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .docs-section h3 {
+            color: var(--text-dark);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .docs-section p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .code-block {
+            background: var(--light-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            margin: 1rem 0;
+        }
+
+        .docs-list {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .docs-list li {
+            padding: 0.5rem 0 0.5rem 2rem;
+            position: relative;
+            color: var(--text-light);
+        }
+
+        .docs-list li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .docs-container {
+                grid-template-columns: 1fr;
+            }
+
+            .docs-sidebar {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-sort"></i>
+                <span>Sheets Sorting Helper</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="download.html" class="btn-download">Download</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Documentation -->
+    <section class="hero" style="background: white; padding: 3rem 0;">
+        <div class="container">
+            <h1>Documentation</h1>
+            <p style="color: var(--text-light); margin-bottom: 2rem;">Complete guides and references</p>
+
+            <div class="docs-container">
+                <!-- Sidebar -->
+                <div class="docs-sidebar">
+                    <h3>📖 Getting Started</h3>
+                    <ul>
+                        <li><a href="#" class="doc-link" data-section="quickstart">Quick Start</a></li>
+                        <li><a href="#" class="doc-link" data-section="installation">Installation</a></li>
+                        <li><a href="#" class="doc-link" data-section="first-sort">First Sort</a></li>
+                    </ul>
+
+                    <h3 style="margin-top: 1.5rem;">🎯 Usage Guide</h3>
+                    <ul>
+                        <li><a href="#" class="doc-link" data-section="basic-sorting">Basic Sorting</a></li>
+                        <li><a href="#" class="doc-link" data-section="advanced-sorting">Advanced Sorting</a></li>
+                        <li><a href="#" class="doc-link" data-section="smart-sort">Smart Sort</a></li>
+                        <li><a href="#" class="doc-link" data-section="custom-orders">Custom Orders</a></li>
+                    </ul>
+
+                    <h3 style="margin-top: 1.5rem;">🛠️ Features</h3>
+                    <ul>
+                        <li><a href="#" class="doc-link" data-section="templates">Save Templates</a></li>
+                        <li><a href="#" class="doc-link" data-section="preview">Live Preview</a></li>
+                        <li><a href="#" class="doc-link" data-section="shortcuts">Keyboard Shortcuts</a></li>
+                        <li><a href="#" class="doc-link" data-section="settings">Settings</a></li>
+                    </ul>
+
+                    <h3 style="margin-top: 1.5rem;">❓ Support</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="troubleshooting.html">Troubleshooting</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Content -->
+                <div class="docs-content">
+                    <!-- Quick Start -->
+                    <div class="docs-section active" data-section="quickstart">
+                        <h2>Quick Start Guide</h2>
+                        <p>Get started with Google Sheets Sorting Helper in just 2 minutes.</p>
+
+                        <h3>Installation (30 seconds)</h3>
+                        <ul class="docs-list">
+                            <li>Visit the Chrome Web Store</li>
+                            <li>Click "Add to Chrome"</li>
+                            <li>Confirm installation</li>
+                            <li>Look for the icon in your toolbar</li>
+                        </ul>
+
+                        <h3>First Sort (1 minute)</h3>
+                        <ul class="docs-list">
+                            <li>Open any Google Sheet</li>
+                            <li>Select your data (including headers)</li>
+                            <li>Click the extension icon</li>
+                            <li>Choose a column to sort</li>
+                            <li>Click "Sort"</li>
+                        </ul>
+
+                        <p>That's it! Your data is now sorted. You can use Ctrl+Z to undo if needed.</p>
+                    </div>
+
+                    <!-- Installation -->
+                    <div class="docs-section" data-section="installation">
+                        <h2>Installation</h2>
+                        <p>Multiple ways to install based on your preference.</p>
+
+                        <h3>Chrome Extension</h3>
+                        <p>Best for individual users. Quick installation from Chrome Web Store.</p>
+                        <ul class="docs-list">
+                            <li>Works on Chrome, Edge, Brave browsers</li>
+                            <li>Automatic updates</li>
+                            <li>Keyboard shortcuts available</li>
+                            <li>Settings page</li>
+                        </ul>
+
+                        <h3>Workspace Add-on</h3>
+                        <p>Best for teams and enterprises. Native integration with Google Workspace.</p>
+                        <ul class="docs-list">
+                            <li>Available to all workspace members</li>
+                            <li>Admin controls</li>
+                            <li>No toolbar needed</li>
+                            <li>Built-in to Google Sheets</li>
+                        </ul>
+
+                        <p>You can install both! They work together perfectly.</p>
+                    </div>
+
+                    <!-- First Sort -->
+                    <div class="docs-section" data-section="first-sort">
+                        <h2>Your First Sort</h2>
+                        <p>Step-by-step guide to complete your first sort.</p>
+
+                        <h3>Step 1: Select Your Data</h3>
+                        <p>Open a Google Sheet and select the data you want to sort. Make sure to include the header row.</p>
+
+                        <h3>Step 2: Open the Extension</h3>
+                        <p>Click the Sorting Helper icon in your toolbar (or use Ctrl+Shift+S).</p>
+
+                        <h3>Step 3: Choose Your Sort</h3>
+                        <p>Select the column to sort and choose ascending or descending order.</p>
+
+                        <h3>Step 4: Apply</h3>
+                        <p>Click the "Sort" button. Your data is now sorted!</p>
+
+                        <p style="margin-top: 1rem; padding: 1rem; background: var(--light-bg); border-radius: 8px;"><strong>Tip:</strong> Use Preview to see the results before applying.</p>
+                    </div>
+
+                    <!-- Basic Sorting -->
+                    <div class="docs-section" data-section="basic-sorting">
+                        <h2>Basic Sorting</h2>
+                        <p>Simple, single-column sorting for everyday use.</p>
+
+                        <h3>How to Basic Sort</h3>
+                        <ul class="docs-list">
+                            <li>Select data range</li>
+                            <li>Click extension icon</li>
+                            <li>Choose column</li>
+                            <li>Choose A-Z or Z-A</li>
+                            <li>Click Sort</li>
+                        </ul>
+
+                        <h3>Data Types</h3>
+                        <p>The extension automatically detects your data type:</p>
+                        <ul class="docs-list">
+                            <li><strong>Text:</strong> Sorted alphabetically (A-Z)</li>
+                            <li><strong>Numbers:</strong> Sorted numerically</li>
+                            <li><strong>Dates:</strong> Sorted chronologically</li>
+                            <li><strong>Mixed:</strong> Intelligently sorted</li>
+                        </ul>
+
+                        <h3>Keyboard Shortcut</h3>
+                        <div class="code-block">Ctrl+Shift+S</div>
+                    </div>
+
+                    <!-- Advanced Sorting -->
+                    <div class="docs-section" data-section="advanced-sorting">
+                        <h2>Advanced Sorting</h2>
+                        <p>Sort by multiple columns with different priorities.</p>
+
+                        <h3>Multi-Column Sort</h3>
+                        <p>Sort by up to 3 columns simultaneously.</p>
+
+                        <h3>Example: Employee Data</h3>
+                        <ul class="docs-list">
+                            <li><strong>Primary:</strong> Department (A-Z)</li>
+                            <li><strong>Secondary:</strong> Salary (High to Low)</li>
+                            <li><strong>Tertiary:</strong> Last Name (A-Z)</li>
+                        </ul>
+
+                        <p style="margin-top: 1rem;">This results in: Employees grouped by department, highest earners first within each department, alphabetically by last name.</p>
+
+                        <h3>Keyboard Shortcut</h3>
+                        <div class="code-block">Ctrl+Shift+A</div>
+                    </div>
+
+                    <!-- Smart Sort -->
+                    <div class="docs-section" data-section="smart-sort">
+                        <h2>Smart Sort</h2>
+                        <p>Let AI analyze your data and recommend optimal sorting.</p>
+
+                        <h3>How Smart Sort Works</h3>
+                        <ul class="docs-list">
+                            <li>Analyzes data types and patterns</li>
+                            <li>Evaluates data completeness</li>
+                            <li>Suggests logical sort order</li>
+                            <li>Provides confidence score</li>
+                        </ul>
+
+                        <h3>Using Smart Sort</h3>
+                        <ul class="docs-list">
+                            <li>Select your data</li>
+                            <li>Press Ctrl+Shift+I</li>
+                            <li>Review recommendations</li>
+                            <li>Accept or modify</li>
+                            <li>Apply sort</li>
+                        </ul>
+
+                        <p style="margin-top: 1rem; padding: 1rem; background: var(--light-bg); border-radius: 8px;"><strong>Tip:</strong> Smart Sort is great for exploring new datasets!</p>
+                    </div>
+
+                    <!-- Custom Orders -->
+                    <div class="docs-section" data-section="custom-orders">
+                        <h2>Custom Sort Orders</h2>
+                        <p>Sort by non-alphabetical sequences.</p>
+
+                        <h3>When to Use</h3>
+                        <ul class="docs-list">
+                            <li>Months (Jan, Feb, Mar...)</li>
+                            <li>Sizes (XS, S, M, L, XL)</li>
+                            <li>Priorities (High, Medium, Low)</li>
+                            <li>Status (Planned, In Progress, Complete)</li>
+                        </ul>
+
+                        <h3>Create Custom Order</h3>
+                        <ul class="docs-list">
+                            <li>Right-click extension → Options</li>
+                            <li>Go to "Sorting" tab</li>
+                            <li>Click "Add Custom Order"</li>
+                            <li>Name your order</li>
+                            <li>Define the sequence</li>
+                            <li>Save</li>
+                        </ul>
+                    </div>
+
+                    <!-- Templates -->
+                    <div class="docs-section" data-section="templates">
+                        <h2>Save Templates</h2>
+                        <p>Save and reuse your sort configurations.</p>
+
+                        <h3>Why Use Templates?</h3>
+                        <ul class="docs-list">
+                            <li>Quick reuse of complex sorts</li>
+                            <li>Share with team members</li>
+                            <li>Maintain consistency</li>
+                            <li>Save setup time</li>
+                        </ul>
+
+                        <h3>Save a Template</h3>
+                        <ul class="docs-list">
+                            <li>Configure your sort</li>
+                            <li>Click "Save as Template"</li>
+                            <li>Name your template</li>
+                            <li>Save</li>
+                        </ul>
+
+                        <h3>Use a Template</h3>
+                        <ul class="docs-list">
+                            <li>Open sort dialog</li>
+                            <li>Click "Load Template"</li>
+                            <li>Select your template</li>
+                            <li>Apply</li>
+                        </ul>
+                    </div>
+
+                    <!-- Preview -->
+                    <div class="docs-section" data-section="preview">
+                        <h2>Live Preview</h2>
+                        <p>See exactly how your data will look before applying changes.</p>
+
+                        <h3>Preview Workflow</h3>
+                        <ul class="docs-list">
+                            <li>Configure your sort</li>
+                            <li>Click "Preview"</li>
+                            <li>Review sample data</li>
+                            <li>Choose: Apply or Cancel</li>
+                        </ul>
+
+                        <p style="margin-top: 1rem; padding: 1rem; background: var(--light-bg); border-radius: 8px;"><strong>Recommendation:</strong> Always use preview with important data!</p>
+                    </div>
+
+                    <!-- Shortcuts -->
+                    <div class="docs-section" data-section="shortcuts">
+                        <h2>Keyboard Shortcuts</h2>
+                        <p>Speed up your workflow with keyboard shortcuts.</p>
+
+                        <h3>Available Shortcuts</h3>
+                        <div class="code-block">
+Ctrl+Shift+S - Open Quick Sort
+Ctrl+Shift+A - Open Advanced Sort
+Ctrl+Shift+I - Open Smart Sort
+Ctrl+Shift+E - Open Popup
+Ctrl+Z - Undo last sort
+                        </div>
+
+                        <h3>Customize Shortcuts</h3>
+                        <p>Go to Options → Shortcuts tab to customize keyboard shortcuts to your preference.</p>
+                    </div>
+
+                    <!-- Settings -->
+                    <div class="docs-section" data-section="settings">
+                        <h2>Settings & Preferences</h2>
+                        <p>Customize the extension to your needs.</p>
+
+                        <h3>General Settings</h3>
+                        <ul class="docs-list">
+                            <li>Theme (Light/Dark/Auto)</li>
+                            <li>Enable/disable animations</li>
+                            <li>Sound notifications</li>
+                        </ul>
+
+                        <h3>Sorting Settings</h3>
+                        <ul class="docs-list">
+                            <li>Default sort order</li>
+                            <li>Auto-detect headers</li>
+                            <li>Stable sort algorithm</li>
+                        </ul>
+
+                        <h3>Data Management</h3>
+                        <ul class="docs-list">
+                            <li>Enable data backup</li>
+                            <li>Clear history</li>
+                            <li>Analytics preferences</li>
+                        </ul>
+
+                        <p style="margin-top: 1rem;">Access settings by right-clicking the extension icon → Options.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div style="background: linear-gradient(135deg, var(--primary-color) 0%, #667eea 100%); color: white; padding: 2rem; border-radius: 12px; margin-top: 2rem; text-align: center;">
+                <h3 style="margin-bottom: 1rem;">Still have questions?</h3>
+                <p style="margin-bottom: 1.5rem;">Check out our FAQ or contact support</p>
+                <div style="display: flex; gap: 1rem; justify-content: center;">
+                    <a href="faq.html" style="display: inline-block; background: white; color: var(--primary-color); padding: 0.75rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+                        View FAQ
+                    </a>
+                    <a href="contact.html" style="display: inline-block; background: rgba(255,255,255,0.2); color: white; padding: 0.75rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div style="text-align: center; padding: 2rem 0;">
+                <p>&copy; 2024 Google Sheets Sorting Helper. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/script.js"></script>
+    <script>
+        // Documentation section switching
+        document.querySelectorAll('.doc-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const section = link.dataset.section;
+                
+                // Hide all sections
+                document.querySelectorAll('[data-section]').forEach(el => {
+                    el.classList.remove('active');
+                });
+                
+                // Remove active from all links
+                document.querySelectorAll('.doc-link').forEach(l => {
+                    l.classList.remove('active');
+                });
+                
+                // Show selected section
+                document.querySelector(`[data-section="${section}"]`).classList.add('active');
+                link.classList.add('active');
+            });
+        });
+
+        // Set first link as active
+        document.querySelector('.doc-link').classList.add('active');
+    </script>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - Google Sheets Sorting Helper</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .feature-detail {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .feature-detail h3 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .feature-detail i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .example-code {
+            background: var(--light-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-sort"></i>
+                <span>Sheets Sorting Helper</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="download.html" class="btn-download">Download</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Features Section -->
+    <section class="hero" style="padding: 3rem 0;">
+        <div class="container" style="max-width: 900px;">
+            <h1>Comprehensive Features</h1>
+            <p style="color: var(--text-light); font-size: 1.1rem; margin-bottom: 2rem;">Explore all the powerful sorting capabilities</p>
+
+            <!-- Quick Sort -->
+            <div class="feature-detail">
+                <h3><i class="fas fa-lightning-bolt"></i> Quick Sort</h3>
+                <p>The fastest way to sort your data. Select a column and choose ascending or descending order. One click, instant results.</p>
+                <div class="example-code">
+Keyboard Shortcut: Ctrl+Shift+S
+Perfect for: Alphabetical sorting, numeric order, dates
+                </div>
+            </div>
+
+            <!-- Multi-Column Sort -->
+            <div class="feature-detail">
+                <h3><i class="fas fa-arrows-sort"></i> Multi-Column Sorting</h3>
+                <p>Sort by up to 3 columns with different priorities and sort directions. Primary sort, secondary sort, tertiary sort all at once.</p>
+                <div class="example-code">
+Example: Sort by Department (A-Z), then by Salary (Descending)
+Result: Employees grouped by department with highest earners first
+                </div>
+            </div>
+
+            <!-- Smart Sort -->
+            <div class="feature-detail">
+                <h3><i class="fas fa-brain"></i> Smart Sort with AI</h3>
+                <p>Intelligent recommendations analyze your data structure and suggest optimal sorting. Get AI-powered insights for better data organization.</p>
+                <div class="example-code">
+Keyboard Shortcut: Ctrl+Shift+I
+Analyzes: Data types, uniqueness, patterns, completeness
+Confidence Score: Shows how confident the recommendation is
+                </div>
+            </div>
+
+            <!-- Live Preview -->
+            <div class="feature-detail">
+                <h3><i class="fas fa-eye"></i> Live Preview</h3>
+                <p>See exactly how your data will look before applying changes. Preview sample rows and verify everything looks correct.</p>
+                <div class="example-code">
+Step 1: Configure your sort
+Step 2: Click Preview
+Step 3: Review sample data
+Step 4: Apply or cancel
+                </div>
+            </div>
+
+            <!-- Custom Sort Orders -->
+            <div class="feature-detail">
+                <h3><i class="fas fa-cog"></i> Custom Sort Orders</h3>
+                <p>Define non-alphabetical sort sequences. Perfect for months, sizes, priorities, or any custom sequence you need.</p>
+                <div class="example-code">
+Examples:
+- Months: Jan, Feb, Mar, Apr, May, Jun...
+- Sizes: XS, S, M, L, XL, XXL
+- Priorities: High, Medium, Low
+- Status: Planned, In Progress, Complete
+                </div>
+            </div>
+
+            <!-- Save Templates -->
+            <div class="feature-detail">
+                <h3><i class="fas fa-save"></i> Save & Reuse Templates</h3>
+                <p>Save your sort configurations and apply them instantly to any sheet. Never set up the same sort twice.</p>
+                <div class="example-code">
+Create Template: Give it a name and description
+Use Template: Load in one click
+Manage: Edit, delete, or export templates
+Share: Export and send to team members
+                </div>
+            </div>
+
+            <!-- Keyboard Shortcuts -->
+            <div class="feature-detail">
+                <h3><i class="fas fa-keyboard"></i> Keyboard Shortcuts</h3>
+                <p>Power user shortcuts for rapid workflows. Remember these for maximum productivity.</p>
+                <div class="example-code">
+Ctrl+Shift+S - Quick Sort
+Ctrl+Shift+A - Advanced Sort
+Ctrl+Shift+I - Smart Sort
+Ctrl+Shift+E - Open Popup
+Ctrl+Z - Undo last sort
+                </div>
+            </div>
+
+            <!-- Data Safety -->
+            <div class="feature-detail">
+                <h3><i class="fas fa-shield-alt"></i> Data Safety & Backup</h3>
+                <p>Your data is protected. Automatic backups before sorting, easy undo, and version history integration.</p>
+                <div class="example-code">
+Before Sort: Auto-backup created
+During Sort: Real-time processing
+After Sort: Easy undo with Ctrl+Z
+Version History: Google Sheets integration
+                </div>
+            </div>
+
+            <!-- Type Detection -->
+            <div class="feature-detail">
+                <h3><i class="fas fa-robot"></i> Automatic Type Detection</h3>
+                <p>Intelligent detection of data types. Numbers sort numerically, dates chronologically, text alphabetically.</p>
+                <div class="example-code">
+Supported Types:
+- Text (alphabetical)
+- Numbers (numeric value)
+- Dates (chronological)
+- Booleans (true/false)
+- Mixed types (intelligent handling)
+                </div>
+            </div>
+
+            <!-- Settings & Preferences -->
+            <div class="feature-detail">
+                <h3><i class="fas fa-sliders-h"></i> Customizable Settings</h3>
+                <p>Personalize your experience with comprehensive preferences and options.</p>
+                <div class="example-code">
+Display:
+- Light/Dark theme
+- Enable/disable animations
+- Sound notifications
+
+Sorting:
+- Default sort direction
+- Auto-detect headers
+- Stable sort algorithm
+
+Data Management:
+- Enable backups
+- Clear history
+- Analytics control
+                </div>
+            </div>
+
+            <!-- Performance -->
+            <div class="feature-detail">
+                <h3><i class="fas fa-rocket"></i> Optimized Performance</h3>
+                <p>Fast sorting even with large datasets. Optimized algorithms handle 10,000+ rows smoothly.</p>
+                <div class="example-code">
+Performance Benchmarks:
+- 100 rows: ~50ms
+- 1,000 rows: ~200ms
+- 10,000 rows: ~1,200ms
+- Memory efficient: 2-15MB
+                </div>
+            </div>
+
+            <!-- Analytics -->
+            <div class="feature-detail">
+                <h3><i class="fas fa-chart-bar"></i> Optional Analytics</h3>
+                <p>Understand your sorting patterns. Optional analytics tracking helps improve the tool (completely optional, can be disabled).</p>
+                <div class="example-code">
+Tracks (with your permission):
+- Feature usage
+- Performance metrics
+- Error reports
+- Aggregate statistics
+
+Privacy First:
+- Anonymous data
+- No personal information
+- Easy disable in settings
+- Full transparency
+                </div>
+            </div>
+
+            <!-- Context Menu -->
+            <div class="feature-detail">
+                <h3><i class="fas fa-mouse"></i> Context Menu Integration</h3>
+                <p>Right-click on your data for quick sorting options. Faster access without switching tabs.</p>
+                <div class="example-code">
+Available options when right-clicking:
+- Sort A-Z
+- Sort Z-A
+- Open Advanced Sort
+- Quick Templates
+- Settings
+                </div>
+            </div>
+
+            <!-- Comparison -->
+            <section class="comparison" style="margin-top: 3rem;">
+                <h2>Chrome Extension vs Workspace Add-on</h2>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Chrome Extension</th>
+                            <th>Workspace Add-on</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Quick Sort</td>
+                            <td>✅ Yes</td>
+                            <td>✅ Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Advanced Sort</td>
+                            <td>✅ Yes</td>
+                            <td>✅ Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Smart Sort</td>
+                            <td>✅ Yes</td>
+                            <td>✅ Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Live Preview</td>
+                            <td>✅ Yes</td>
+                            <td>✅ Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Custom Orders</td>
+                            <td>✅ Yes</td>
+                            <td>✅ Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Keyboard Shortcuts</td>
+                            <td>✅ Yes</td>
+                            <td>❌ No</td>
+                        </tr>
+                        <tr>
+                            <td>Context Menus</td>
+                            <td>✅ Yes</td>
+                            <td>❌ No</td>
+                        </tr>
+                        <tr>
+                            <td>Settings Page</td>
+                            <td>✅ Yes</td>
+                            <td>❌ Limited</td>
+                        </tr>
+                        <tr>
+                            <td>Cross-browser</td>
+                            <td>✅ Chrome/Edge/Brave</td>
+                            <td>✅ All browsers</td>
+                        </tr>
+                        <tr>
+                            <td>Enterprise Ready</td>
+                            <td>❌ Individual</td>
+                            <td>✅ Teams</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- CTA -->
+            <div style="background: linear-gradient(135deg, var(--primary-color) 0%, #667eea 100%); color: white; padding: 2rem; border-radius: 12px; margin-top: 2rem; text-align: center;">
+                <h3 style="margin-bottom: 1rem;">Ready to get started?</h3>
+                <a href="download.html" style="display: inline-block; background: white; color: var(--primary-color); padding: 0.75rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s;">
+                    Download Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div style="text-align: center; padding: 2rem 0;">
+                <p>&copy; 2024 Google Sheets Sorting Helper. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/script.js"></script>
+</body>
+</html>

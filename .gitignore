@@ -1,0 +1,76 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build outputs
+dist/
+build/
+*.zip
+
+# Chrome extension
+chrome-extension/shared/
+chrome-extension/*.zip
+
+# Google Apps Script
+workspace-addon/.clasp.json
+workspace-addon/node_modules/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Testing
+coverage/
+.nyc_output
+.jest/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Package managers
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Documentation build
+docs/_build/
+docs/.doctrees/
+
+# Credentials and sensitive data
+credentials.json
+token.json
+client_secret.json
+*.key
+*.pem
+
+# Development artifacts
+.clasp.json
+appsscript.json.backup

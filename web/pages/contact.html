@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Support - Google Sheets Sorting Helper</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .contact-box h3 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-box p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .contact-box a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.1);
+        }
+
+        .submit-btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #3367d6;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .support-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #667eea 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+
+        .support-section h3 {
+            margin-bottom: 1rem;
+        }
+
+        .support-section ul {
+            list-style: none;
+        }
+
+        .support-section li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .support-section li:before {
+            content: "✓";
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-sort"></i>
+                <span>Sheets Sorting Helper</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="download.html" class="btn-download">Download</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="hero" style="background: white;">
+        <div class="container contact-container">
+            <h1>Get in Touch</h1>
+            <p style="color: var(--text-light); font-size: 1.1rem; margin-bottom: 3rem;">We'd love to hear from you. Reach out with questions, feedback, or support needs.</p>
+
+            <!-- Contact Options -->
+            <div class="contact-grid">
+                <div class="contact-box">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Support</h3>
+                    <p>For general inquiries and support requests</p>
+                    <a href="mailto:support@example.com">support@example.com</a>
+                    <p style="margin-top: 1rem; font-size: 0.85rem; color: #9AA0A6;">Response time: Within 24 hours</p>
+                </div>
+
+                <div class="contact-box">
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>GitHub Issues</h3>
+                    <p>Report bugs and request features</p>
+                    <a href="https://github.com/kiro-sheets-helper/issues" target="_blank">Open an Issue</a>
+                    <p style="margin-top: 1rem; font-size: 0.85rem; color: #9AA0A6;">Community-driven support</p>
+                </div>
+
+                <div class="contact-box">
+                    <div class="contact-icon">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <h3>Twitter/X</h3>
+                    <p>Follow for updates and announcements</p>
+                    <a href="https://twitter.com/sheetshelper" target="_blank">@SheetsHelper</a>
+                    <p style="margin-top: 1rem; font-size: 0.85rem; color: #9AA0A6;">Quick updates and news</p>
+                </div>
+
+                <div class="contact-box">
+                    <div class="contact-icon">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <h3>Discord Community</h3>
+                    <p>Chat with other users and get help</p>
+                    <a href="https://discord.gg/sheetshelper" target="_blank">Join Server</a>
+                    <p style="margin-top: 1rem; font-size: 0.85rem; color: #9AA0A6;">Real-time community chat</p>
+                </div>
+            </div>
+
+            <!-- Support Information -->
+            <div class="support-section">
+                <h3>Before Contacting Support</h3>
+                <ul>
+                    <li>Check our <a href="faq.html" style="color: white; text-decoration: underline;">FAQ page</a></li>
+                    <li>Read the <a href="troubleshooting.html" style="color: white; text-decoration: underline;">troubleshooting guide</a></li>
+                    <li>Search <a href="https://github.com/kiro-sheets-helper/issues" target="_blank" style="color: white; text-decoration: underline;">GitHub issues</a> for similar problems</li>
+                    <li>Check your internet connection and browser compatibility</li>
+                </ul>
+            </div>
+
+            <!-- Contact Form -->
+            <div style="margin-top: 3rem;">
+                <h2 style="margin-bottom: 1rem; color: var(--text-dark);">Send us a Message</h2>
+                <p style="color: var(--text-light); margin-bottom: 2rem;">Fill out the form below and we'll get back to you within 24 hours.</p>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="bug">Bug Report</option>
+                            <option value="feature">Feature Request</option>
+                            <option value="support">Technical Support</option>
+                            <option value="partnership">Partnership Inquiry</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required placeholder="Please describe your issue or question..."></textarea>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- FAQ Links -->
+            <div style="background: var(--light-bg); padding: 2rem; border-radius: 12px; margin-top: 2rem; text-align: center;">
+                <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Quick Links</h3>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="faq.html" style="display: inline-block; padding: 0.5rem 1rem; background: white; color: var(--primary-color); text-decoration: none; border-radius: 8px; font-weight: 600;">FAQ</a>
+                    <a href="docs.html" style="display: inline-block; padding: 0.5rem 1rem; background: white; color: var(--primary-color); text-decoration: none; border-radius: 8px; font-weight: 600;">Documentation</a>
+                    <a href="troubleshooting.html" style="display: inline-block; padding: 0.5rem 1rem; background: white; color: var(--primary-color); text-decoration: none; border-radius: 8px; font-weight: 600;">Troubleshooting</a>
+                    <a href="https://github.com/kiro-sheets-helper" target="_blank" style="display: inline-block; padding: 0.5rem 1rem; background: white; color: var(--primary-color); text-decoration: none; border-radius: 8px; font-weight: 600;">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div style="text-align: center; padding: 2rem 0;">
+                <p>&copy; 2024 Google Sheets Sorting Helper. All rights reserved.</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">Response time: Typically within 24 hours | Community support available 24/7</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/script.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // In a real application, this would send to a server
+            console.log('Form submission:', { name, email, subject, message });
+
+            // Show success message
+            showNotification('Thank you! We will get back to you shortly.', 'success');
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>

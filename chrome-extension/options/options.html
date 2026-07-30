@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Sheets Sorting Helper - Settings</title>
+  <link rel="stylesheet" href="options-styles.css">
+</head>
+<body>
+  <div class="options-container">
+    <header class="options-header">
+      <h1>Google Sheets Sorting Helper</h1>
+      <p class="subtitle">Settings & Preferences</p>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="options-nav">
+      <button class="nav-button active" data-tab="general">
+        <span class="nav-icon">⚙️</span>
+        <span class="nav-label">General</span>
+      </button>
+      <button class="nav-button" data-tab="sorting">
+        <span class="nav-icon">📊</span>
+        <span class="nav-label">Sorting</span>
+      </button>
+      <button class="nav-button" data-tab="templates">
+        <span class="nav-icon">📋</span>
+        <span class="nav-label">Templates</span>
+      </button>
+      <button class="nav-button" data-tab="shortcuts">
+        <span class="nav-icon">⌨️</span>
+        <span class="nav-label">Shortcuts</span>
+      </button>
+      <button class="nav-button" data-tab="about">
+        <span class="nav-icon">ℹ️</span>
+        <span class="nav-label">About</span>
+      </button>
+    </nav>
+
+    <!-- Tab Content -->
+    <div class="options-content">
+      <!-- General Settings Tab -->
+      <section class="tab-content active" data-tab="general">
+        <div class="settings-group">
+          <h2>Display Preferences</h2>
+          
+          <div class="setting-item">
+            <label class="checkbox-label">
+              <input type="checkbox" id="show-preview" name="showPreview">
+              <span class="checkbox-custom"></span>
+              <span class="label-text">Show preview before sorting</span>
+            </label>
+            <p class="setting-description">Display a preview of your data after sorting is applied</p>
+          </div>
+
+          <div class="setting-item">
+            <label class="checkbox-label">
+              <input type="checkbox" id="enable-animations" name="animationsEnabled">
+              <span class="checkbox-custom"></span>
+              <span class="label-text">Enable animations</span>
+            </label>
+            <p class="setting-description">Use smooth transitions and animations in the UI</p>
+          </div>
+
+          <div class="setting-item">
+            <label class="checkbox-label">
+              <input type="checkbox" id="auto-detect-headers" name="autoDetectHeaders">
+              <span class="checkbox-custom"></span>
+              <span class="label-text">Auto-detect header rows</span>
+            </label>
+            <p class="setting-description">Automatically identify and protect header rows</p>
+          </div>
+        </div>
+
+        <div class="settings-group">
+          <h2>Theme</h2>
+          
+          <div class="setting-item">
+            <label class="radio-label">
+              <input type="radio" name="theme" value="auto">
+              <span class="radio-custom"></span>
+              <span class="label-text">Auto (Follow system)</span>
+            </label>
+          </div>
+
+          <div class="setting-item">
+            <label class="radio-label">
+              <input type="radio" name="theme" value="light">
+              <span class="radio-custom"></span>
+              <span class="label-text">Light</span>
+            </label>
+          </div>
+
+          <div class="setting-item">
+            <label class="radio-label">
+              <input type="radio" name="theme" value="dark">
+              <span class="radio-custom"></span>
+              <span class="label-text">Dark</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="settings-group">
+          <h2>Data Management</h2>
+          
+          <div class="setting-item">
+            <label class="checkbox-label">
+              <input type="checkbox" id="create-backup" name="createBackup">
+              <span class="checkbox-custom"></span>
+              <span class="label-text">Create backup before sorting</span>
+            </label>
+            <p class="setting-description">Always backup data before applying sorts</p>
+          </div>
+
+          <div class="setting-item">
+            <label class="checkbox-label">
+              <input type="checkbox" id="track-history" name="trackHistory">
+              <span class="checkbox-custom"></span>
+              <span class="label-text">Track sort history</span>
+            </label>
+            <p class="setting-description">Keep a record of recent sorts for quick access</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sorting Settings Tab -->
+      <section class="tab-content" data-tab="sorting">
+        <div class="settings-group">
+          <h2>Default Sorting Options</h2>
+          
+          <div class="setting-item">
+            <label>Default Sort Order:</label>
+            <div class="select-wrapper">
+              <select id="default-sort-order" name="defaultSortOrder">
+                <option value="asc">Ascending (A-Z, 1-9)</option>
+                <option value="desc">Descending (Z-A, 9-1)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="setting-item">
+            <label>Default Data Type:</label>
+            <div class="select-wrapper">
+              <select id="default-data-type" name="defaultDataType">
+                <option value="auto">Auto-detect</option>
+                <option value="text">Text</option>
+                <option value="number">Numbers</option>
+                <option value="date">Dates</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-group">
+          <h2>Advanced Sorting</h2>
+          
+          <div class="setting-item">
+            <label class="checkbox-label">
+              <input type="checkbox" id="enable-smart-sort" name="enableSmartSort">
+              <span class="checkbox-custom"></span>
+              <span class="label-text">Enable AI-powered Smart Sort</span>
+            </label>
+            <p class="setting-description">Use machine learning to suggest optimal sort criteria</p>
+          </div>
+
+          <div class="setting-item">
+            <label class="checkbox-label">
+              <input type="checkbox" id="stable-sort" name="stableSort">
+              <span class="checkbox-custom"></span>
+              <span class="label-text">Use stable sort algorithm</span>
+            </label>
+            <p class="setting-description">Preserve original order for equal values</p>
+          </div>
+
+          <div class="setting-item">
+            <label class="checkbox-label">
+              <input type="checkbox" id="nulls-last" name="nullsLast">
+              <span class="checkbox-custom"></span>
+              <span class="label-text">Place empty cells at the end</span>
+            </label>
+            <p class="setting-description">Move null/empty values to the bottom of sorted data</p>
+          </div>
+        </div>
+
+        <div class="settings-group">
+          <h2>Custom Sort Orders</h2>
+          
+          <div class="custom-orders-list" id="custom-orders-list">
+            <!-- Custom orders will be loaded here -->
+          </div>
+
+          <button class="btn-secondary" id="add-custom-order-btn">
+            <span class="btn-icon">+</span> Add Custom Order
+          </button>
+        </div>
+      </section>
+
+      <!-- Templates Tab -->
+      <section class="tab-content" data-tab="templates">
+        <div class="settings-group">
+          <h2>Saved Templates</h2>
+          
+          <div class="templates-list" id="templates-list">
+            <!-- Templates will be loaded here -->
+          </div>
+
+          <p class="empty-message" id="no-templates-message">
+            No templates saved yet. Create a sort configuration and save it as a template for quick reuse.
+          </p>
+        </div>
+
+        <div class="settings-group">
+          <h2>Template Management</h2>
+          
+          <button class="btn-secondary" id="import-templates-btn">
+            <span class="btn-icon">📥</span> Import Templates
+          </button>
+          
+          <button class="btn-secondary" id="export-templates-btn">
+            <span class="btn-icon">📤</span> Export Templates
+          </button>
+
+          <button class="btn-danger" id="clear-templates-btn">
+            <span class="btn-icon">🗑️</span> Clear All Templates
+          </button>
+        </div>
+      </section>
+
+      <!-- Keyboard Shortcuts Tab -->
+      <section class="tab-content" data-tab="shortcuts">
+        <div class="settings-group">
+          <h2>Keyboard Shortcuts</h2>
+          
+          <div class="shortcuts-list">
+            <div class="shortcut-item">
+              <div class="shortcut-action">Quick Sort</div>
+              <div class="shortcut-key">
+                <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd>
+              </div>
+            </div>
+
+            <div class="shortcut-item">
+              <div class="shortcut-action">Advanced Sort Dialog</div>
+              <div class="shortcut-key">
+                <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd>
+              </div>
+            </div>
+
+            <div class="shortcut-item">
+              <div class="shortcut-action">AI-Powered Smart Sort</div>
+              <div class="shortcut-key">
+                <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>
+              </div>
+            </div>
+
+            <div class="shortcut-item">
+              <div class="shortcut-action">Open Extension Popup</div>
+              <div class="shortcut-key">
+                <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd>
+              </div>
+            </div>
+          </div>
+
+          <div class="setting-item">
+            <label class="checkbox-label">
+              <input type="checkbox" id="enable-keyboard-shortcuts" name="enableKeyboardShortcuts">
+              <span class="checkbox-custom"></span>
+              <span class="label-text">Enable keyboard shortcuts</span>
+            </label>
+            <p class="setting-description">Use keyboard shortcuts for quick access to sorting features</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Tab -->
+      <section class="tab-content" data-tab="about">
+        <div class="settings-group">
+          <h2>About Google Sheets Sorting Helper</h2>
+          
+          <div class="about-content">
+            <div class="version-info">
+              <p><strong>Version:</strong> <span id="version">1.0.0</span></p>
+              <p><strong>Last Updated:</strong> <span id="update-date">-</span></p>
+            </div>
+
+            <div class="about-description">
+              <p>An advanced Google Sheets sorting helper that makes organizing data effortless with smart sorting, multi-column support, and custom sort orders.</p>
+            </div>
+
+            <div class="about-features">
+              <h3>Key Features:</h3>
+              <ul>
+                <li>✨ Multi-column sorting with priority-based ordering</li>
+                <li>🤖 AI-powered smart sort recommendations</li>
+                <li>👁️ Real-time preview before applying sorts</li>
+                <li>🎯 Custom sort orders for any data type</li>
+                <li>⌨️ Keyboard shortcuts for quick access</li>
+                <li>💾 Save and reuse sort templates</li>
+                <li>🔄 Data backup before sorting</li>
+              </ul>
+            </div>
+
+            <div class="about-links">
+              <a href="https://github.com/kiro-sheets-helper" target="_blank" class="link-button">
+                <span class="link-icon">🔗</span> GitHub Repository
+              </a>
+              <a href="https://github.com/kiro-sheets-helper/issues" target="_blank" class="link-button">
+                <span class="link-icon">🐛</span> Report Issues
+              </a>
+              <a href="https://github.com/kiro-sheets-helper/wiki" target="_blank" class="link-button">
+                <span class="link-icon">📚</span> Documentation
+              </a>
+            </div>
+
+            <div class="about-privacy">
+              <h3>Privacy & Data</h3>
+              <p>This extension respects your privacy:</p>
+              <ul>
+                <li>✓ All data processing happens locally in your browser</li>
+                <li>✓ No personal data collection or tracking</li>
+                <li>✓ No data sent to external servers</li>
+                <li>✓ Anonymous analytics only (can be disabled)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-group">
+          <h2>Development & Support</h2>
+          
+          <button class="btn-secondary" id="open-devtools-btn">
+            <span class="btn-icon">🛠️</span> Developer Tools
+          </button>
+
+          <button class="btn-secondary" id="view-analytics-btn">
+            <span class="btn-icon">📊</span> View Analytics
+          </button>
+
+          <button class="btn-danger" id="reset-settings-btn">
+            <span class="btn-icon">🔄</span> Reset All Settings
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="options-footer">
+      <div class="footer-content">
+        <button class="btn-primary" id="save-settings-btn">Save Settings</button>
+        <button class="btn-secondary" id="reset-to-defaults-btn">Reset to Defaults</button>
+      </div>
+      <p class="footer-message" id="status-message"></p>
+    </footer>
+  </div>
+
+  <!-- Modals -->
+  <div id="analytics-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Analytics Overview</h2>
+        <button class="modal-close" onclick="closeModal('analytics-modal')">&times;</button>
+      </div>
+      <div class="modal-body" id="analytics-content">
+        <!-- Analytics content will be loaded here -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="closeModal('analytics-modal')">Close</button>
+        <button class="btn-secondary" id="export-analytics-btn">Export Data</button>
+        <button class="btn-danger" id="clear-analytics-btn">Clear Analytics</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="options-script.js"></script>
+</body>
+</html>
