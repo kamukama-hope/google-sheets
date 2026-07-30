@@ -30,7 +30,7 @@ body {
   display: flex;
   align-items: center;
   padding: 16px 20px;
-  background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
   color: white;
   gap: 12px;
 }
@@ -119,26 +119,26 @@ body {
 }
 
 .action-btn.primary {
-  background-color: #4285f4;
+  background-color: #1a1a1a;
   color: white;
 }
 
 .action-btn.primary:not(:disabled):hover {
-  background-color: #3367d6;
+  background-color: #2d2d2d;
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(66, 133, 244, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .action-btn.secondary {
   background-color: #f8f9fa;
-  color: #3c4043;
+  color: #1a1a1a;
   border: 1px solid #dadce0;
 }
 
 .action-btn.secondary:not(:disabled):hover {
-  background-color: #e8f0fe;
-  border-color: #4285f4;
-  color: #4285f4;
+  background-color: #e8e8e8;
+  border-color: #1a1a1a;
+  color: #1a1a1a;
 }
 
 .action-btn:disabled {
@@ -212,7 +212,7 @@ body {
 .setting-item input[type="checkbox"] {
   width: 16px;
   height: 16px;
-  accent-color: #4285f4;
+  accent-color: #1a1a1a;
 }
 
 .setting-item select {
@@ -227,8 +227,8 @@ body {
 
 .setting-item select:focus {
   outline: none;
-  border-color: #4285f4;
-  box-shadow: 0 0 0 1px #4285f4;
+  border-color: #1a1a1a;
+  box-shadow: 0 0 0 1px #1a1a1a;
 }
 
 /* Footer */
@@ -247,7 +247,7 @@ body {
 
 .links a {
   font-size: 12px;
-  color: #4285f4;
+  color: #1a1a1a;
   text-decoration: none;
 }
 
@@ -306,8 +306,8 @@ body {
   
   .action-btn.secondary:not(:disabled):hover {
     background-color: #3c4043;
-    border-color: #4285f4;
-    color: #4285f4;
+    border-color: #1a1a1a;
+    color: #1a1a1a;
   }
   
   .setting-item label {
